@@ -1,5 +1,5 @@
 require("dotenv").config();
-const pool = require("./server/config/database");
+const pool = require("./config/database");
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
@@ -8,10 +8,10 @@ const bodyParser = require("body-parser");
 const port = process.env.PORT;
 
 //routes
-const userRouter = require("./server/api/users/user.router");
-const questionRouter = require("./server/api/questions/questions.router");
-const answerRouter = require("./server/api/answers/answers.router");
-const resetPasswordRouter = require("./server/api/reset/reset.router");
+const userRouter = require("./api/users/user.router");
+const questionRouter = require("./api/questions/questions.router");
+const answerRouter = require("./api/answers/answers.router");
+const resetPasswordRouter = require("./api/reset/reset.router");
 
 //Configur 
 const corsOptions = {
