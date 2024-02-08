@@ -13,6 +13,13 @@ const questionRouter = require("./server/api/questions/questions.router");
 const answerRouter = require("./server/api/answers/answers.router");
 const resetPasswordRouter = require("./server/api/reset/reset.router");
 
+//Configur 
+const corsOptions = {
+  origin: "https://evangadi-forum-clone-frontend-abdi.netlify.app/login",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+};
+
 //Midlewares
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
